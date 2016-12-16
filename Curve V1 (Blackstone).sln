@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prasatec.Apps.Testing", "Prasatec.Apps.Testing\Prasatec.Apps.Testing.csproj", "{163BBA2D-E754-4A09-8EA5-A22BB78A44A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{40747D97-6203-4836-881E-DA5CC47EBC79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{16B38251-1088-4AB3-9E7D-57E9C4005266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prasatec", "Prasatec\Prasatec.csproj", "{0326B001-5E28-48FA-B198-2503A023B248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prasatec.Raden", "Prasatec.Raden\Prasatec.Raden.csproj", "{215BE844-4207-429C-9BFC-A29375940B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prasatec.Experience", "Prasatec.Experience\Prasatec.Experience.csproj", "{C9231DCE-4051-469C-A2A5-602779E62083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prasatec.Cu2Com", "Prasatec.Cu2Com\Prasatec.Cu2Com.csproj", "{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{163BBA2D-E754-4A09-8EA5-A22BB78A44A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163BBA2D-E754-4A09-8EA5-A22BB78A44A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163BBA2D-E754-4A09-8EA5-A22BB78A44A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163BBA2D-E754-4A09-8EA5-A22BB78A44A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0326B001-5E28-48FA-B198-2503A023B248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0326B001-5E28-48FA-B198-2503A023B248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0326B001-5E28-48FA-B198-2503A023B248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0326B001-5E28-48FA-B198-2503A023B248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215BE844-4207-429C-9BFC-A29375940B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215BE844-4207-429C-9BFC-A29375940B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215BE844-4207-429C-9BFC-A29375940B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215BE844-4207-429C-9BFC-A29375940B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9231DCE-4051-469C-A2A5-602779E62083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9231DCE-4051-469C-A2A5-602779E62083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9231DCE-4051-469C-A2A5-602779E62083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9231DCE-4051-469C-A2A5-602779E62083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{163BBA2D-E754-4A09-8EA5-A22BB78A44A7} = {40747D97-6203-4836-881E-DA5CC47EBC79}
+		{0326B001-5E28-48FA-B198-2503A023B248} = {16B38251-1088-4AB3-9E7D-57E9C4005266}
+		{215BE844-4207-429C-9BFC-A29375940B12} = {16B38251-1088-4AB3-9E7D-57E9C4005266}
+		{C9231DCE-4051-469C-A2A5-602779E62083} = {16B38251-1088-4AB3-9E7D-57E9C4005266}
+		{F8D6AF7D-55F8-4A7E-8BF1-B90C6F037803} = {16B38251-1088-4AB3-9E7D-57E9C4005266}
+	EndGlobalSection
+EndGlobal

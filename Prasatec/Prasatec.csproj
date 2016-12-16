@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0326B001-5E28-48FA-B198-2503A023B248}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prasatec</RootNamespace>
+    <AssemblyName>curve</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="Cu2Com\IPacket.cs" />
+    <Compile Include="Cu2Com\IPacketConverter.cs" />
+    <Compile Include="Cu2Com\Client.cs" />
+    <Compile Include="Cu2Com\Server.cs" />
+    <Compile Include="Exceptions\BuilderLockedException.cs" />
+    <Compile Include="Experience\Data\LogEventTypes.cs" />
+    <Compile Include="Experience\Data\RoleModes.cs" />
+    <Compile Include="Experience\DynamicEditorModes.cs" />
+    <Compile Include="Experience\Elements\IButtonElement.cs" />
+    <Compile Include="Experience\Elements\IElement.cs" />
+    <Compile Include="Experience\IActionListItem.cs" />
+    <Compile Include="Experience\IControllerAbout.cs" />
+    <Compile Include="Experience\IControllerC2C.cs" />
+    <Compile Include="Experience\IControllerConnect.cs" />
+    <Compile Include="Experience\IControllerSplash.cs" />
+    <Compile Include="Experience\IElementDynamicTableLayout.cs" />
+    <Compile Include="Experience\IWindowCollection.cs" />
+    <Compile Include="Experience\IWindowEditor.cs" />
+    <Compile Include="Experience\IWindowInteraction.cs" />
+    <Compile Include="Experience\IWindowLog.cs" />
+    <Compile Include="Experience\IWindowMain.cs" />
+    <Compile Include="Experience\IWindowOperation.cs" />
+    <Compile Include="Experience\IWindowProperties.cs" />
+    <Compile Include="Experience\IWindowSettings.cs" />
+    <Compile Include="Experience\IDesign.cs" />
+    <Compile Include="Experience\IElement.cs" />
+    <Compile Include="Experience\IFieldListValues.cs" />
+    <Compile Include="Experience\IWindow.cs" />
+    <Compile Include="Experience\PopupResults.cs" />
+    <Compile Include="Experience\Events\CollectionCategoryChangedEventArgs.cs" />
+    <Compile Include="Experience\Events\CollectionPageChangedEventArgs.cs" />
+    <Compile Include="Experience\Exceptions\WindowNotControllerException.cs" />
+    <Compile Include="Experience\IController.cs" />
+    <Compile Include="Experience\IControllerCollection.cs" />
+    <Compile Include="Experience\IControllerEditor.cs" />
+    <Compile Include="Experience\IControllerInteraction.cs" />
+    <Compile Include="Experience\IControllerLog.cs" />
+    <Compile Include="Experience\IControllerMain.cs" />
+    <Compile Include="Experience\IControllerOperation.cs" />
+    <Compile Include="Experience\IControllerProperty.cs" />
+    <Compile Include="Experience\IControllerSettings.cs" />
+    <Compile Include="Plink\Attributes\UrlKnowledgeBaseAttribute.cs" />
+    <Compile Include="Plink\Attributes\UrlFeatureSuggestionAttribute.cs" />
+    <Compile Include="Plink\Attributes\UrlProductHomepageAttribute.cs" />
+    <Compile Include="Plink\Attributes\UrlOnlineGuideAttribute.cs" />
+    <Compile Include="Plink\Definitions.cs" />
+    <Compile Include="Plink\DeploymentDefinition.cs" />
+    <Compile Include="Plink\MethodDefinition.cs" />
+    <Compile Include="Plink\ModuleDefinition.cs" />
+    <Compile Include="Plink\PropertyDefinition.cs" />
+    <Compile Include="Plink\FieldDefinition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raden\DatabaseColumn.cs" />
+    <Compile Include="Raden\DatabaseCondition.cs" />
+    <Compile Include="Raden\DatabaseSort.cs" />
+    <Compile Include="Raden\IDatabaseStructure.cs" />
+    <Compile Include="Raden\IDatabaseRestore.cs" />
+    <Compile Include="Raden\IDatabaseBackup.cs" />
+    <Compile Include="Raden\IQueryTable.cs" />
+    <Compile Include="Raden\IQueryResult.cs" />
+    <Compile Include="Raden\IQueryConditionByValue.cs" />
+    <Compile Include="Raden\IQueryConditionByColumn.cs" />
+    <Compile Include="Raden\IQueryConditionActionable.cs" />
+    <Compile Include="Raden\IQueryCondition.cs" />
+    <Compile Include="Raden\IQueryGroup.cs" />
+    <Compile Include="Raden\IQueryLimit.cs" />
+    <Compile Include="Raden\IQuerySort.cs" />
+    <Compile Include="Raden\IQueryColumn.cs" />
+    <Compile Include="Raden\IQuery.cs" />
+    <Compile Include="Raden\IQueryBuilder.cs" />
+    <Compile Include="Raden\IConnectionBuilder.cs" />
+    <Compile Include="IBuilder.cs" />
+    <Compile Include="IResult.cs" />
+    <Compile Include="Raden\IColumn.cs" />
+    <Compile Include="Raden\ICollection.cs" />
+    <Compile Include="Raden\IConnection.cs" />
+    <Compile Include="Raden\ITable.cs" />
+    <Compile Include="Raden\ITimestamp.cs" />
+    <Compile Include="Raden\IForeignKey.cs" />
+    <Compile Include="Raden\IModel.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeAttribute.cs" />
+    <Compile Include="Raden\Attributes\ColumnAllowNullAttribute.cs" />
+    <Compile Include="Raden\Attributes\ColumnAutoValueAttribute.cs" />
+    <Compile Include="Raden\Attributes\ColumnIndexAttribute.cs" />
+    <Compile Include="Raden\Attributes\ColumnPropertyAttribute.cs" />
+    <Compile Include="Raden\Attributes\TableModelAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeBooleanAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeContentAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeDescriptionAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeEnumAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeForeignKeyAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeIntegerAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeKeyAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeNameAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeCurrencyAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypePercentageAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypePinAttribute.cs" />
+    <Compile Include="Raden\Attributes\ValueTypeTimestampAttribute.cs" />
+    <Compile Include="Raden\QueryColumnActions.cs" />
+    <Compile Include="Raden\QuerySortDirections.cs" />
+    <Compile Include="Raden\QueryComparisonOperators.cs" />
+    <Compile Include="Raden\QueryLogicalOperators.cs" />
+    <Compile Include="Raden\QueryExecutionMethod.cs" />
+    <Compile Include="Raden\ColumnIndexTypes.cs" />
+    <Compile Include="Raden\ColumnAutoValues.cs" />
+    <Compile Include="Raden\DatabaseEngines.cs" />
+    <Compile Include="Raden\CountMethods.cs" />
+    <Compile Include="Raden\EncryptionOptions.cs" />
+    <Compile Include="Raden\Exceptions\AutoIncrementAlreadySetException.cs" />
+    <Compile Include="Raden\Exceptions\DatabaseConnectionFailedException.cs" />
+    <Compile Include="Raden\Exceptions\DatabaseengineNotImplementedException.cs" />
+    <Compile Include="Raden\Exceptions\MissingDefinitionException.cs" />
+    <Compile Include="Raden\Exceptions\ModelNotTableException.cs" />
+    <Compile Include="Raden\Exceptions\PrimaryKeyAlreadyDefinedException.cs" />
+    <Compile Include="Raden\Exceptions\PropertyNotColumnException.cs" />
+    <Compile Include="Raden\Exceptions\PropertyNotFoundException.cs" />
+    <Compile Include="Raden\ForeignKeyHelper.cs" />
+    <Compile Include="Raden\ForeignKey-1.cs" />
+    <Compile Include="Raden\ForeignKey-2.cs" />
+    <Compile Include="Raden\ForeignKey-3.cs" />
+    <Compile Include="Raden\ForeignKey-4.cs" />
+    <Compile Include="Raden\ForeignKey-5.cs" />
+    <Compile Include="Raden\ForeignKey-6.cs" />
+    <Compile Include="Raden\Timestamp.cs" />
+    <Compile Include="Events\GenericArrayEventArgs.cs" />
+    <Compile Include="Events\GenericEventArgs.cs" />
+    <Compile Include="Exceptions\CodeException.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
