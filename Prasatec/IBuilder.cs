@@ -13,7 +13,7 @@ namespace Prasatec
         bool IsLocked { get; }
         void Lock();
 
-        IBuilder<T> Save();
-        IBuilder<T> Load();
+        //IBuilder<T> Save();
+        //IBuilder<T> Load();
     }
 }

@@ -56,13 +56,13 @@ namespace Prasatec.Raden
             }
             try
             {
-                var property = def.GetProperties<M>().Where(x => x.Reference.Name == "ID").FirstOrDefault();
-                if (property != null)
+                value = reader[def.GetModule<M>().RadenTableIdColumn];
+                var idProperty = def.GetProperties<M>().Where(x => x.Reference.Name == "ID").FirstOrDefault();
+                if (idProperty != null)
                 {
-                    property.Reference.SetValue(record, reader[def.GetModule<M>().RadenTableIdColumn]);
+                    idProperty.Reference.SetValue(record, value);
                 }
-                property = null;
-                //reader[def.GetModule<M>().RadenTableIdColumn];
+                idProperty = null;
             }
             catch { }
             return record;

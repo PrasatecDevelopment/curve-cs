@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Prasatec.Experience
 {
-    public interface IWindow
+    public interface IWindow : IDisposable
     {
         IWindow Base { get; }
         IDesign Design { get; }
@@ -16,6 +16,8 @@ namespace Prasatec.Experience
 
         void Show();
         void Show(IWin32Window owner);
+        void ShowDialog();
+        void ShowDialog(IWin32Window owner);
         void Close();
     }
 }

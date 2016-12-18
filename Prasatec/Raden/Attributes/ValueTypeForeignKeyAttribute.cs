@@ -12,7 +12,7 @@ namespace Prasatec.Raden
             : base("ForeignKey")
         {
         }
-        public ValueTypeForeignKeyAttribute(Int32 Value)
+        public ValueTypeForeignKeyAttribute(ulong Value)
             : base("ForeignKey")
         {
             this.setValue(Value);
@@ -20,7 +20,7 @@ namespace Prasatec.Raden
 
         public override object ConvertTo(object value)
         {
-            Int32 result = -1;
+            ulong result = 0;
             if (value is IForeignKey)
             {
                 result = ((IForeignKey)value).getValue();

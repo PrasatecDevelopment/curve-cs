@@ -84,12 +84,6 @@
     <Compile Include="DynamicWindows\EditorWindow.Designer.cs">
       <DependentUpon>EditorWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="DynamicWindows\InteractionWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DynamicWindows\InteractionWindow.Designer.cs">
-      <DependentUpon>InteractionWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="DynamicWindows\LogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,18 +95,6 @@
     </Compile>
     <Compile Include="DynamicWindows\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DynamicWindows\OperationWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DynamicWindows\OperationWindow.Designer.cs">
-      <DependentUpon>OperationWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DynamicWindows\PropertyWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DynamicWindows\PropertyWindow.Designer.cs">
-      <DependentUpon>PropertyWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="DynamicWindows\SettingsWindow.cs">
       <SubType>Form</SubType>
@@ -162,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DynamicWindows\EditorWindow.resx">
       <DependentUpon>EditorWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DynamicWindows\InteractionWindow.resx">
-      <DependentUpon>InteractionWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

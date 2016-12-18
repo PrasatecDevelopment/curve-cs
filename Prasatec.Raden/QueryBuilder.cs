@@ -178,9 +178,11 @@ namespace Prasatec.Raden
 
         public IQueryBuilder<M> Table<T>()
         {
+            string tableName = def.GetModule<T>().Identifier;
+            if (_tables.Count(x => x.Identifier == tableName) > 0) { return this; }
             this._tables.Add(new QueryTable()
             {
-                s_Identifier = def.GetModule<T>().Identifier
+                s_Identifier = tableName
             });
             return this;
         }
@@ -2168,6 +2170,11 @@ namespace Prasatec.Raden
         }
 
         public IBuilder<IQuery> Load()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBuilder<IQuery> Clone(IQuery Source)
         {
             throw new NotImplementedException();
         }

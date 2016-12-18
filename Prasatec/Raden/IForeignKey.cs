@@ -8,6 +8,6 @@ namespace Prasatec.Raden
 {
     public interface IForeignKey
     {
-        int getValue();
+        ulong getValue();
     }
 }

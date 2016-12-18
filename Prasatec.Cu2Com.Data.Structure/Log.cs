@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Prasatec.Cu2Com.Interactions
+namespace Prasatec.Cu2Com.Data.Structure
 {
-    class EditLogController
+    public class Log : Interface1, Interface2
     {
     }
 }

@@ -9,25 +9,25 @@ namespace Prasatec.Raden
     public struct ForeignKey<T1> : IForeignKey
         where T1 : IModel
     {
-        private int _value;
+        private ulong _value;
 
-        public ForeignKey(int value)
+        public ForeignKey(ulong value)
         {
             this._value = value;
         }
 
-        int IForeignKey.getValue()
+        ulong IForeignKey.getValue()
         {
             return this._value;
         }
 
-        public static implicit operator ForeignKey<T1>(Int32 value)
+        public static implicit operator ForeignKey<T1>(ulong value)
         {
-            return ForeignKeyHelper.Convert<Int32, ForeignKey<T1>>(value);
+            return ForeignKeyHelper.Convert<ulong, ForeignKey<T1>>(value);
         }
-        public static implicit operator int(ForeignKey<T1> value)
+        public static implicit operator ulong(ForeignKey<T1> value)
         {
-            return ForeignKeyHelper.Convert<ForeignKey<T1>, Int32>(value);
+            return ForeignKeyHelper.Convert<ForeignKey<T1>, ulong>(value);
         }
         public static implicit operator ForeignKey<T1>(T1 value)
         {

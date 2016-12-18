@@ -42,69 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionBuilder.cs" />
+    <Compile Include="C2CGlobals.cs" />
     <Compile Include="Converters\JsonConverter.cs" />
-    <Compile Include="DatabaseBackup.cs" />
-    <Compile Include="DatabaseRestore.cs" />
-    <Compile Include="Data\LogCollection.cs" />
-    <Compile Include="Data\_model_.cs" />
-    <Compile Include="Data\PermissionCollection.cs" />
-    <Compile Include="Data\RoleCollection.cs" />
-    <Compile Include="Data\SettingCollection.cs" />
-    <Compile Include="Data\UserCollection.cs" />
-    <Compile Include="Data\UserResetCollection.cs" />
-    <Compile Include="Data\UserSecureCollection.cs" />
-    <Compile Include="Interactions\EditRoleController.cs" />
-    <Compile Include="Interactions\EditSettingController.cs" />
-    <Compile Include="Interactions\EditUserResetController.cs" />
-    <Compile Include="Interactions\ManageLogsController.cs" />
-    <Compile Include="Interactions\EditLogController.cs" />
-    <Compile Include="Interactions\ManagePermissionsController.cs" />
-    <Compile Include="Interactions\EditPermissionController.cs" />
-    <Compile Include="Interactions\ManageRolesController.cs" />
-    <Compile Include="Interactions\ManageSettingsController.cs" />
-    <Compile Include="Interactions\ManageUserResetController.cs" />
-    <Compile Include="Interactions\ManageUsersController.cs" />
-    <Compile Include="Interactions\EditUserController.cs" />
-    <Compile Include="Interactions\Windows\LogEntry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interactions\Windows\LogEntry.Designer.cs">
-      <DependentUpon>LogEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interactions\Windows\Logs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interactions\Windows\Logs.Designer.cs">
-      <DependentUpon>Logs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interactions\Windows\Permissions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interactions\Windows\Permissions.Designer.cs">
-      <DependentUpon>Permissions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interactions\Windows\Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interactions\Windows\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interactions\Windows\UserReset.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interactions\Windows\UserReset.Designer.cs">
-      <DependentUpon>UserReset.cs</DependentUpon>
-    </Compile>
     <Compile Include="QueryResult.cs" />
-    <Compile Include="StreamParser.cs" />
-    <Compile Include="StreamDatabase.cs" />
-    <Compile Include="Data\Log.cs" />
-    <Compile Include="Data\Permission.cs" />
-    <Compile Include="Data\Role.cs" />
-    <Compile Include="Data\Setting.cs" />
-    <Compile Include="Data\User.cs" />
-    <Compile Include="Data\UserReset.cs" />
-    <Compile Include="Data\UserSecure.cs" />
+    <Compile Include="RoleBuilder.cs" />
+    <Compile Include="UserBuilder.cs" />
+    <Compile Include="DelegationBuilder.cs" />
+    <Compile Include="EventBuilder.cs" />
+    <Compile Include="Experience\ActionController.cs" />
+    <Compile Include="Experience\DelegationController.cs" />
+    <Compile Include="Experience\EventController.cs" />
+    <Compile Include="Experience\RoleController.cs" />
+    <Compile Include="Experience\UserController.cs" />
+    <Compile Include="Raden\UserCollection.cs" />
+    <Compile Include="Raden\RoleCollection.cs" />
+    <Compile Include="Raden\EventCollection.cs" />
+    <Compile Include="Raden\DelegationCollection.cs" />
+    <Compile Include="Raden\ActionCollection.cs" />
+    <Compile Include="Raden\RoleModel.cs" />
+    <Compile Include="Raden\UserModel.cs" />
+    <Compile Include="Raden\ActionModel.cs" />
+    <Compile Include="Raden\DelegationModel.cs" />
+    <Compile Include="Raden\EventModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

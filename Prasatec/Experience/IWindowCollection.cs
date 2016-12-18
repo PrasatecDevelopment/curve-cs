@@ -35,5 +35,6 @@ namespace Prasatec.Experience
         void AddCategory(string Name, string Label, object[] Values);
         void RemoveCategory(string Name);
         Int32 GetCategory(string Name);
+        void SetCategory(string Name, Int32 Value);
     }
 }

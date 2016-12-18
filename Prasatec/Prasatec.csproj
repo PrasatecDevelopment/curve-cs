@@ -45,10 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="Cu2Com\BaseBuilder.cs" />
+    <Compile Include="Cu2Com\Experience\BaseController.cs" />
+    <Compile Include="Cu2Com\IControllerBuilder.cs" />
     <Compile Include="Cu2Com\IPacket.cs" />
     <Compile Include="Cu2Com\IPacketConverter.cs" />
     <Compile Include="Cu2Com\Client.cs" />
+    <Compile Include="Cu2Com\Raden\ActionTypes.cs" />
+    <Compile Include="Cu2Com\Raden\BaseCollection.cs" />
+    <Compile Include="Cu2Com\Raden\BaseModel.cs" />
+    <Compile Include="Cu2Com\Raden\EventTypes.cs" />
     <Compile Include="Cu2Com\Server.cs" />
+    <Compile Include="Cu2Com\UserModes.cs" />
     <Compile Include="Exceptions\BuilderLockedException.cs" />
     <Compile Include="Experience\Data\LogEventTypes.cs" />
     <Compile Include="Experience\Data\RoleModes.cs" />
@@ -56,10 +64,6 @@
     <Compile Include="Experience\Elements\IButtonElement.cs" />
     <Compile Include="Experience\Elements\IElement.cs" />
     <Compile Include="Experience\IActionListItem.cs" />
-    <Compile Include="Experience\IControllerAbout.cs" />
-    <Compile Include="Experience\IControllerC2C.cs" />
-    <Compile Include="Experience\IControllerConnect.cs" />
-    <Compile Include="Experience\IControllerSplash.cs" />
     <Compile Include="Experience\IElementDynamicTableLayout.cs" />
     <Compile Include="Experience\IWindowCollection.cs" />
     <Compile Include="Experience\IWindowEditor.cs" />
@@ -78,14 +82,6 @@
     <Compile Include="Experience\Events\CollectionPageChangedEventArgs.cs" />
     <Compile Include="Experience\Exceptions\WindowNotControllerException.cs" />
     <Compile Include="Experience\IController.cs" />
-    <Compile Include="Experience\IControllerCollection.cs" />
-    <Compile Include="Experience\IControllerEditor.cs" />
-    <Compile Include="Experience\IControllerInteraction.cs" />
-    <Compile Include="Experience\IControllerLog.cs" />
-    <Compile Include="Experience\IControllerMain.cs" />
-    <Compile Include="Experience\IControllerOperation.cs" />
-    <Compile Include="Experience\IControllerProperty.cs" />
-    <Compile Include="Experience\IControllerSettings.cs" />
     <Compile Include="Plink\Attributes\UrlKnowledgeBaseAttribute.cs" />
     <Compile Include="Plink\Attributes\UrlFeatureSuggestionAttribute.cs" />
     <Compile Include="Plink\Attributes\UrlProductHomepageAttribute.cs" />
@@ -100,6 +96,7 @@
     <Compile Include="Raden\DatabaseColumn.cs" />
     <Compile Include="Raden\DatabaseCondition.cs" />
     <Compile Include="Raden\DatabaseSort.cs" />
+    <Compile Include="Raden\Exceptions\ModelValidationFailedException.cs" />
     <Compile Include="Raden\IDatabaseStructure.cs" />
     <Compile Include="Raden\IDatabaseRestore.cs" />
     <Compile Include="Raden\IDatabaseBackup.cs" />

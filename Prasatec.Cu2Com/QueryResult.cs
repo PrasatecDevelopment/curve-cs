@@ -12,13 +12,11 @@ namespace Prasatec.Cu2Com
     {
         internal QueryResult() { }
 
-#pragma warning disable CS0649
         internal int i_CountPages, i_CountRecords, i_CountTotal, i_AffectedRows, i_InsertId;
         internal string s_ErrorMessage;
         internal M[] o_Records;
         internal object o_ScalarValue;
         internal bool b_Successful;
-#pragma warning restore CS0649
 
         public int AffectedRows { get { return this.i_AffectedRows; } }
         public int InsertId { get { return this.i_InsertId; } }

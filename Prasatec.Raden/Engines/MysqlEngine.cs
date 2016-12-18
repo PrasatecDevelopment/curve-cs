@@ -472,9 +472,9 @@ namespace Prasatec.Raden.Engines
                             ((MySqlCommand)command).Parameters.AddWithValue(item.Key, item.Value);
                         }
                     }
+                    EngineHelper.querySelect<M>(ref result, query, command, this);
                     try
                     {
-                        EngineHelper.querySelect<M>(ref result, query, command, this);
                     }
                     catch (Exception ex)
                     {

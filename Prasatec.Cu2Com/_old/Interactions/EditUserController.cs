@@ -35,7 +35,7 @@ namespace Prasatec.Cu2Com.Interactions
             var result = new EditUserController();
             result.Model = new User();
             result.Window = new EditorWindow();
-            result.Window.EditTitle = "Create New User";
+            //result.Window.EditTitle = "Create New User";
             result.Window.Mode = DynamicEditorModes.Edit;
             result.Window.CanChangeMode = false;
             createFields(result.Window, result.Model);
@@ -47,8 +47,8 @@ namespace Prasatec.Cu2Com.Interactions
             var result = new EditUserController();
             result.Model = Model;
             result.Window = new EditorWindow();
-            result.Window.EditTitle = "Edit User ID " + Model.ID.ToString();
-            result.Window.ViewTitle = "View User ID " + Model.ID.ToString();
+            //result.Window.EditTitle = "Edit User ID " + Model.ID.ToString();
+            //result.Window.ViewTitle = "View User ID " + Model.ID.ToString();
             result.Window.Mode = DynamicEditorModes.View;
             result.Window.CanChangeMode = AllowEditing;
             createFields(result.Window, result.Model);
@@ -60,8 +60,8 @@ namespace Prasatec.Cu2Com.Interactions
             var result = new EditUserController();
             result.Model = Model;
             result.Window = new EditorWindow();
-            result.Window.EditTitle = "Edit User ID " + Model.ID.ToString();
-            result.Window.ViewTitle = "View User ID " + Model.ID.ToString();
+            //result.Window.EditTitle = "Edit User ID " + Model.ID.ToString();
+            //result.Window.ViewTitle = "View User ID " + Model.ID.ToString();
             result.Window.Mode = DynamicEditorModes.Edit;
             result.Window.CanChangeMode = !AutomaticallyClose;
             createFields(result.Window, result.Model);

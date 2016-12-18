@@ -10,30 +10,23 @@ using System.Windows.Forms;
 
 namespace Prasatec.Experience.BaseWindows
 {
-    public partial class BasePaddedWindow : Form, IWindow
+    public partial class BasePaddedWindow : BaseWindow, IWindow
     {
-        private IDesign o_Design;
-        public IWindow Base { get { return this; } }
-        public IDesign Design
-        {
-            get { return this.o_Design; }
-            set
-            {
-                if (value == null)
-                {
-                    // Use reflection to set properties back to normal
-                }
-                else
-                {
-                    this.o_Design = value;
-                }
-            }
-        }
         public BasePaddedWindow()
         {
             this.BackColor = Color.White;
             this.ForeColor = Color.Black;
             this.Padding = new Padding(8);
         }
+
+        /*void IWindow.ShowDialog()
+        {
+            Base.ShowDialog();
+        }
+
+        void IWindow.ShowDialog(IWin32Window owner)
+        {
+            Base.ShowDialog(owner);
+        }*/
     }
 }

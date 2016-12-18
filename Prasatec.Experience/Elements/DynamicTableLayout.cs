@@ -49,8 +49,8 @@ namespace Prasatec.Experience.Elements
                 {
                     element.Item2.Visible = value == DynamicEditorModes.View;
                     element.Item3.Visible = value == DynamicEditorModes.Edit;
-                    element.Item2.Enabled = element.Item2.Visible;
-                    element.Item3.Enabled = element.Item3.Visible;
+                    //element.Item2.Enabled = element.Item2.Visible;
+                    //element.Item3.Enabled = element.Item3.Visible;
                     if (value == DynamicEditorModes.View)
                     {
                         this.values.Add(element.Item1, this.GetValue(element.Item1));

@@ -134,5 +134,10 @@ namespace Prasatec.Raden
         {
             throw new NotImplementedException();
         }
+
+        public IBuilder<IConnection> Clone(IConnection Source)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

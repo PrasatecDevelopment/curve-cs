@@ -15,7 +15,6 @@ namespace Prasatec.Experience
         DynamicEditorModes Mode { get; set; }
         new IWindowEditor Base { get; }
         new void Show(IWin32Window owner);
-        String EditTitle { get; set; }
-        String ViewTitle { get; set; }
+        String Text { get; set; }
     }
 }

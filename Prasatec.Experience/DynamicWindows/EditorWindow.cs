@@ -12,33 +12,8 @@ namespace Prasatec.Experience.DynamicWindows
 {
     public partial class EditorWindow : BaseWindows.BasePaddedWindow, IWindowEditor
     {
-        private string s_EditTitle, s_ViewTitle;
         public event EventHandler<GenericEventArgs<bool>> Saved;
         public IElementDynamicTableLayout Fields { get { return pFields; } }
-        public string EditTitle
-        {
-            get { return s_EditTitle; }
-            set
-            {
-                s_EditTitle = value;
-                if (this.Mode == DynamicEditorModes.Edit)
-                {
-                    this.Text = value;
-                }
-            }
-        }
-        public string ViewTitle
-        {
-            get { return s_ViewTitle; }
-            set
-            {
-                s_ViewTitle = value;
-                if (this.Mode == DynamicEditorModes.View)
-                {
-                    this.Text = value;
-                }
-            }
-        }
         public Boolean CanChangeMode
         {
             get { return b_CanChangeMode; }
@@ -54,14 +29,6 @@ namespace Prasatec.Experience.DynamicWindows
             set
             {
                 Fields.Mode = value;
-                if (value == DynamicEditorModes.Edit)
-                {
-                    this.Text = EditTitle;
-                }
-                else
-                {
-                    this.Text = ViewTitle;
-                }
                 if (CanChangeMode == false)
                 {
                     if (value == DynamicEditorModes.Edit)
@@ -133,6 +100,7 @@ namespace Prasatec.Experience.DynamicWindows
             }
             pFields.Enabled = true;
             pButtons.Enabled = true;
+            if (!successful) { return; }
             if (!CanChangeMode)
             {
                 this.Close();

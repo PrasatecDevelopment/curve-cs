@@ -34,5 +34,15 @@ namespace Prasatec.Experience.BaseWindows
             this.BackColor = Color.White;
             this.ForeColor = Color.Black;
         }
+
+        void IWindow.ShowDialog()
+        {
+            base.ShowDialog();
+        }
+
+        void IWindow.ShowDialog(IWin32Window owner)
+        {
+            base.ShowDialog(owner);
+        }
     }
 }

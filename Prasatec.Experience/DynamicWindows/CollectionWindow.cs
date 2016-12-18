@@ -54,6 +54,11 @@ namespace Prasatec.Experience.DynamicWindows
             return Categories.GetValue<int>(Name);
         }
 
+        public void SetCategory(string Name, int Value)
+        {
+            Categories.SetValue(Name, Value);
+        }
+
         void IWindowCollection.RemoveCategory(string Name)
         {
             Categories.RemoveControl(Name);
@@ -397,7 +402,7 @@ namespace Prasatec.Experience.DynamicWindows
                 cList.Columns.Clear();
                 foreach (string item in value)
                 {
-                    cList.Columns.Add(item, -1);
+                    cList.Columns.Add(item, 100);
                 }
             }
         }
@@ -428,10 +433,20 @@ namespace Prasatec.Experience.DynamicWindows
                 item.SubItems.Add(columns[i]?.ToString());
             }
             cList.Items.Add(item);
+
+            for (int i = 0; i < columns.Length; i++)
+            {
+                cList.Columns[i].Width = -1;
+                if (cList.Columns[i].Width < 100)
+                {
+                    cList.Columns[i].Width = 100;
+                }
+            }
         }
 
         void IWindowCollection.ClearRows()
         {
+            cList.SelectedIndices.Clear();
             cList.Items.Clear();
         }
 
@@ -515,6 +530,8 @@ namespace Prasatec.Experience.DynamicWindows
             Categories.Mode = DynamicEditorModes.Edit;
             ((IWindowCollection)this).PageCount = 1;
             cList_SelectedIndexChanged(null, null);
+            cList.FullRowSelect = true;
+            cList.HideSelection = false;
         }
 
         private void bClose_Click(object sender, EventArgs e)
