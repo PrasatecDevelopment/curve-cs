@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prasatec.Cu2Com.Raden
+namespace Prasatec.Plink.Attributes
 {
-    public enum EventTypes : ushort
+    class RemoteEventAttribute
     {
-        NotSpecified = 0,
-        ManualEntry = 1
     }
 }

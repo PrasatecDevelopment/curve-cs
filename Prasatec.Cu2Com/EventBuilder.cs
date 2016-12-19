@@ -15,10 +15,9 @@ namespace Prasatec.Cu2Com
         public EventBuilder(EventController providingController, string callingMethod) : base(providingController, callingMethod)
         {
         }
-
-        private string vName;
-        private string vDescription;
-        private UserModes vMode;
+        
+        private string vCode, vContent;
+        private EventTypes vType;
 
         protected override IQueryResult<EventModel> CreateErrorResult(string Message)
         {
@@ -41,6 +40,9 @@ namespace Prasatec.Cu2Com
             return new Raden.EventModel()
             {
                 ID = vID,
+                Code = vCode,
+                Content = vContent,
+                Type = vType
             };
         }
 
@@ -50,6 +52,18 @@ namespace Prasatec.Cu2Com
             if (Source.IsChanged(x => x.ID))
             {
                 queryBuilder.Where(x => x.ID, Source.ID, Operator);
+            }
+            if (!IdOnly && Source.IsChanged(x => x.Code))
+            {
+                queryBuilder.Where(x => x.Code, Source.Code, Operator);
+            }
+            if (!IdOnly && Source.IsChanged(x => x.Content))
+            {
+                queryBuilder.Where(x => x.Content, Source.Content, Operator);
+            }
+            if (!IdOnly && Source.IsChanged(x => x.Type))
+            {
+                queryBuilder.Where(x => x.Type, Source.Type, Operator);
             }
             return queryBuilder;
         }
@@ -62,46 +76,48 @@ namespace Prasatec.Cu2Com
         protected override void GetValuesFromModel(EventModel Source)
         {
             this.vID = Source.ID;
+            this.vCode = Source.Code;
+            this.vContent = Source.Content;
+            this.vType = Source.Type;
         }
 
         protected override string[] ValidateValues()
         {
             List<string> errorMessages = new List<string>();
-
+            if (vType == EventTypes.NotSpecified)
+            {
+                errorMessages.Add("You must provide an event type.");
+            }
+            if (vContent == null || vContent.Trim().Length == 0)
+            {
+                errorMessages.Add("You must type some content.");
+            }
             string[] result = errorMessages.ToArray();
             errorMessages.Clear(); errorMessages = null;
             return result;
         }
 
-        public EventBuilder Name(string Value)
+        public EventBuilder Code(string Value)
         {
             if (!this.IsLocked)
             {
-                this.vName = Value;
+                this.vCode = Value;
             }
             return this;
         }
-        public EventBuilder Description(string Value)
+        public EventBuilder Content(string Value)
         {
             if (!this.IsLocked)
             {
-                this.vDescription = Value;
+                this.vContent = Value;
             }
             return this;
         }
-        public EventBuilder Mode(UserModes Value)
+        public EventBuilder Type(EventTypes Value)
         {
             if (!this.IsLocked)
             {
-                this.vMode = Value;
-            }
-            return this;
-        }
-        public EventBuilder Mode(int Value)
-        {
-            if (!this.IsLocked)
-            {
-                this.vMode = (UserModes)Value;
+                this.vType = Value;
             }
             return this;
         }

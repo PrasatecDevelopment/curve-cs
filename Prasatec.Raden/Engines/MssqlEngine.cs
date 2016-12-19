@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -273,6 +274,27 @@ namespace Prasatec.Raden.Engines
             // TODO: build table structures
             return backup;
         }
+
+        public IDatabaseBackup Backup<T1>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
+        public IDatabaseBackup Backup<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>() { return this.Backup(MethodBase.GetCurrentMethod().GetGenericArguments()); }
 
         public IDatabaseRestore Restore(IDatabaseBackup Backup)
         {

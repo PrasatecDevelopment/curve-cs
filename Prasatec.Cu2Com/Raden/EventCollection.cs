@@ -8,12 +8,12 @@ namespace Prasatec.Cu2Com.Raden
 
         public EventCollection(IConnection Connection) : base(Connection)
         {
-            COLUMNS = new string[] { "Code", "Type", "Timestamp" };
+            COLUMNS = new string[] { "Code", "Type"  };
         }
 
         public EventCollection(IConnection Connection, IQuery Query) : base(Connection, Query)
         {
-            COLUMNS = new string[] { "Code", "Type", "Timestamp" };
+            COLUMNS = new string[] { "Code", "Type" };
         }
 
         protected override IQueryBuilder<EventModel> CreateQueryBuilder()

@@ -24,12 +24,13 @@ namespace Prasatec.Cu2Com.Experience
         protected override IWindowEditor CreateEditor()
         {
             var result = new EditorWindow();
-            /*string[] modenames = Enum.GetNames(typeof(UserModes));
-            int modeindex = Array.IndexOf(modenames, Enum.GetName(typeof(UserModes), editorModel.Mode));
 
-            result.Fields.AddTextbox("vName", "Event Name", editorModel.Name);
-            result.Fields.AddContent("vDescription", "Description", editorModel.Description);
-            result.Fields.AddDropdown("vMode", "User Mode", modenames, modeindex);*/
+            string[] typeNames = Enum.GetNames(typeof(EventTypes));
+            int typeIndex = Array.IndexOf(typeNames, Enum.GetName(typeof(EventTypes), editorModel.Type));
+
+            result.Fields.AddTextbox("vCode", "Event Code", editorModel.Code);
+            result.Fields.AddDropdown("vType", "Event Type", typeNames, typeIndex);
+            result.Fields.AddContent("vContent", "Content", editorModel.Content);
 
             return result;
         }
@@ -42,15 +43,15 @@ namespace Prasatec.Cu2Com.Experience
         protected override void ParseRow(EventModel item)
         {
             if (collectionWindow == null) { return; }
-            //collectionWindow.AddRow(item.Name, item.Mode);
+            collectionWindow.AddRow(item.Code, Enum.GetName(typeof(EventTypes), item.Type));
         }
 
         protected override EventBuilder PrepareBuilder(EventBuilder builder)
         {
-            /*builder = builder
-                .Name(editorWindow.Fields.GetValue<string>("vName"))
-                .Description(editorWindow.Fields.GetValue<string>("vDescription"))
-                .Mode((UserModes)Enum.GetValues(typeof(UserModes)).GetValue(editorWindow.Fields.GetValue<int>("vMode")));*/
+            builder = builder
+                .Code(editorWindow.Fields.GetValue<string>("vCode"))
+                .Content(editorWindow.Fields.GetValue<string>("vContent"))
+                .Type((EventTypes)Enum.GetValues(typeof(EventTypes)).GetValue(editorWindow.Fields.GetValue<int>("vType")));
             return builder;
         }
     }

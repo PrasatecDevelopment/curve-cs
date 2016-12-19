@@ -48,7 +48,7 @@ namespace Prasatec.Raden
                 {
                     value = null;
                 }
-                if (property.RadenValueType is ValueTypeForeignKeyAttribute || property.RadenValueType is ValueTypeTimestampAttribute)
+                else if (property.RadenValueType is ValueTypeForeignKeyAttribute || property.RadenValueType is ValueTypeTimestampAttribute)
                 {
                     value = Activator.CreateInstance(property.Reference.PropertyType, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, new object[] { value }, null);
                 }

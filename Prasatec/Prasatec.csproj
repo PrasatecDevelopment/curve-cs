@@ -82,6 +82,11 @@
     <Compile Include="Experience\Events\CollectionPageChangedEventArgs.cs" />
     <Compile Include="Experience\Exceptions\WindowNotControllerException.cs" />
     <Compile Include="Experience\IController.cs" />
+    <Compile Include="Plink\Attributes\RemoteContractAttribute.cs" />
+    <Compile Include="Plink\Attributes\RemoteEventAttribute.cs" />
+    <Compile Include="Plink\Attributes\RemoteExceptionAttribute.cs" />
+    <Compile Include="Plink\Attributes\RemoteProcedureAttribute.cs" />
+    <Compile Include="Plink\Attributes\RemotePropertyAttribute.cs" />
     <Compile Include="Plink\Attributes\UrlKnowledgeBaseAttribute.cs" />
     <Compile Include="Plink\Attributes\UrlFeatureSuggestionAttribute.cs" />
     <Compile Include="Plink\Attributes\UrlProductHomepageAttribute.cs" />
@@ -97,9 +102,11 @@
     <Compile Include="Raden\DatabaseCondition.cs" />
     <Compile Include="Raden\DatabaseSort.cs" />
     <Compile Include="Raden\Exceptions\ModelValidationFailedException.cs" />
+    <Compile Include="Raden\IColumnStructure.cs" />
     <Compile Include="Raden\IDatabaseStructure.cs" />
     <Compile Include="Raden\IDatabaseRestore.cs" />
     <Compile Include="Raden\IDatabaseBackup.cs" />
+    <Compile Include="Raden\IIndexStructure.cs" />
     <Compile Include="Raden\IQueryTable.cs" />
     <Compile Include="Raden\IQueryResult.cs" />
     <Compile Include="Raden\IQueryConditionByValue.cs" />
@@ -119,6 +126,7 @@
     <Compile Include="Raden\ICollection.cs" />
     <Compile Include="Raden\IConnection.cs" />
     <Compile Include="Raden\ITable.cs" />
+    <Compile Include="Raden\ITableStructure.cs" />
     <Compile Include="Raden\ITimestamp.cs" />
     <Compile Include="Raden\IForeignKey.cs" />
     <Compile Include="Raden\IModel.cs" />

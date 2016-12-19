@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Prasatec.Raden
 {
-    public interface IDatabaseStructure
+    public interface ITableStructure
     {
-        ITableStructure[] Tables { get; }
+        string Name { get; }
+        IColumnStructure[] Columns { get; }
+        IIndexStructure[] Indexes { get; }
     }
 }

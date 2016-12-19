@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,29 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionBuilder.cs" />
     <Compile Include="C2CGlobals.cs" />
     <Compile Include="Converters\JsonConverter.cs" />
+    <Compile Include="HelloWorldService.cs" />
     <Compile Include="QueryResult.cs" />
+    <Compile Include="Raden\ActionCollection.cs" />
+    <Compile Include="Raden\ActionModel.cs" />
+    <Compile Include="Raden\DelegationCollection.cs" />
+    <Compile Include="Raden\DelegationModel.cs" />
+    <Compile Include="Raden\EventCollection.cs" />
+    <Compile Include="Raden\EventModel.cs" />
     <Compile Include="RoleBuilder.cs" />
+    <Compile Include="ServerBase.cs" />
     <Compile Include="UserBuilder.cs" />
-    <Compile Include="DelegationBuilder.cs" />
-    <Compile Include="EventBuilder.cs" />
-    <Compile Include="Experience\ActionController.cs" />
-    <Compile Include="Experience\DelegationController.cs" />
-    <Compile Include="Experience\EventController.cs" />
     <Compile Include="Experience\RoleController.cs" />
     <Compile Include="Experience\UserController.cs" />
     <Compile Include="Raden\UserCollection.cs" />
     <Compile Include="Raden\RoleCollection.cs" />
-    <Compile Include="Raden\EventCollection.cs" />
-    <Compile Include="Raden\DelegationCollection.cs" />
-    <Compile Include="Raden\ActionCollection.cs" />
     <Compile Include="Raden\RoleModel.cs" />
     <Compile Include="Raden\UserModel.cs" />
-    <Compile Include="Raden\ActionModel.cs" />
-    <Compile Include="Raden\DelegationModel.cs" />
-    <Compile Include="Raden\EventModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prasatec.Cu2Com.Raden
+namespace Prasatec.Raden
 {
-    public enum EventTypes : ushort
+    public interface IColumnStructure
     {
-        NotSpecified = 0,
-        ManualEntry = 1
+        string Name { get; }
+
     }
 }

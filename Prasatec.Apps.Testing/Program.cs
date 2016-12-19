@@ -1,6 +1,7 @@
 ﻿using Prasatec.Cu2Com;
 using Prasatec.Cu2Com.Data;
 using Prasatec.Cu2Com.Experience;
+using Prasatec.Cu2Com.Raden;
 using Prasatec.Raden;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,11 @@ namespace Prasatec.Apps.Testing
     {
         static void Main(string[] args)
         {
-            Application.SetCompatibleTextRenderingDefault(true);
+            var s = new Server();
+            s.Start();
+            Console.ReadLine();
+            s.Stop();
+            /*Application.SetCompatibleTextRenderingDefault(true);
             Application.EnableVisualStyles();
             Console.Write("Connecting to MySql Server...");
             var c = new ConnectionBuilder<Raden.Engines.MysqlEngine>()
@@ -27,6 +32,8 @@ namespace Prasatec.Apps.Testing
                 .Build();
             Console.WriteLine("Done");
 
+            //var backup = c.Backup<ActionModel, DelegationModel, EventModel, RoleModel, UserModel>();
+            
             var controller = new UserController(c);
             controller.ShowCollection();
             while (true) { Application.DoEvents(); }

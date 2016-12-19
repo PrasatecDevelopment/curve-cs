@@ -47,13 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColumnStructure.cs" />
     <Compile Include="ConnectionBuilder.cs" />
     <Compile Include="DatabaseBackup.cs" />
     <Compile Include="DatabaseRestore.cs" />
+    <Compile Include="DatabaseStructure.cs" />
     <Compile Include="EngineHelper.cs" />
     <Compile Include="Engines\AzureEngine.cs" />
     <Compile Include="Engines\DB2Engine.cs" />
     <Compile Include="Engines\OracleEngine.cs.cs" />
+    <Compile Include="IndexStructure.cs" />
     <Compile Include="Query.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="Engines\MssqlEngine.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="QuerySort.cs" />
     <Compile Include="MysqlConnectionFailedReasons.cs" />
     <Compile Include="Exceptions\MysqlConnectionFailedException.cs" />
+    <Compile Include="TableStructure.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Prasatec\Prasatec.csproj">

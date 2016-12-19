@@ -86,5 +86,21 @@ namespace Prasatec.Cu2Com.Experience
                 .CreateMethod("In Collection");
             return builder;
         }
+
+        public void SetManager(ulong userId, ulong managerId)
+        {
+        }
+        public void SetRole(ulong userId, ulong roleId)
+        {
+        }
+        public void SetPassword(ulong userId, string Password)
+        {
+        }
+        public void PasswordReset(ulong userId)
+        {
+        }
+        public void SetSecurityQuestion(ulong userId, string securityQuestion, string securityPassword)
+        {
+        }
     }
 }

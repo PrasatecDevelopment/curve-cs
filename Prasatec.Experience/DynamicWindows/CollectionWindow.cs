@@ -460,11 +460,11 @@ namespace Prasatec.Experience.DynamicWindows
             bDelete.BringToFront();
             bModify.BringToFront();
             bView.BringToFront();
-            if (!bDelete.Visible && !bModify.Visible && !bView.Visible && !pNew.Visible && pActions.Visible)
+            if (pActions.Controls.OfType<Control>().Where(x => x.Visible == true).Count() == 0 && pActions.Visible)
             {
                 pActions.Visible = false;
             }
-            else if (bDelete.Visible || bModify.Visible || bView.Visible || pNew.Visible || !pActions.Visible)
+            else if (pActions.Controls.OfType<Control>().Where(x => x.Visible == true).Count() > 0 && !pActions.Visible)
             {
                 pActions.Visible = true;
             }
